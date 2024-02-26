@@ -2,28 +2,50 @@ $sidebar-width: 300px;
 
 .sidenav-container {
   height: 100%;
-}
 
-.sidenav {
-  width: $sidebar-width;
-  display: flex;
-  padding: 1rem;
-  align-items: center;
+  .sidenav {
+    width: $sidebar-width;
+    display: flex;
+    padding: 1rem;
+    align-items: center;
 
-  ::ng-deep {
-    .mat-drawer-inner-container {
-      display: flex;
-      flex-direction: column;
+    ::ng-deep {
+      .mat-drawer-inner-container {
+        display: flex;
+        flex-direction: column;
 
-      >* {
-        margin-bottom: 1rem;
+        button {
+          margin-bottom: 1rem;
+          padding: .5rem 0;
+        }
       }
     }
   }
-}
 
-.iframe {
-  width: calc(100% - $sidebar-width);
-  height: 100vh;
-  border: none;
+  .iframe {
+    width: calc(100% - $sidebar-width);
+    height: 100vh;
+    border: none;
+  }
+
+  @media only screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
+    .sidenav {
+      position: relative;
+      width: 100%;
+      flex-direction: column;
+    }
+
+    mat-sidenav-content {
+      margin: 0 !important;
+      height: auto;
+
+      .iframe {
+        width: 100%;
+      }
+    }
+  }
 }
