@@ -30,19 +30,19 @@ export class AppComponent {
   };
 
   constructor(private sanitizer: DomSanitizer) {
-    this.link = this.sanitizer.bypassSecurityTrustResourceUrl('http://bills-calculate-percentage.gamidas.dev.br');
+    this.link = this.sanitizer.bypassSecurityTrustResourceUrl('https://bills-calculate-percentage.gamidas.dev.br');
     this.buttonColors.calculatePercentage = "primary";
     this.buttonColors.updateSalary = "basic";
   }
 
   navigateToUpdateSalary(): void {
-    this.link = this.sanitizer.bypassSecurityTrustResourceUrl('http://bills-update-salary.gamidas.dev.br');
+    this.link = this.sanitizer.bypassSecurityTrustResourceUrl('https://bills-update-salary.gamidas.dev.br');
     this.buttonColors.updateSalary = "primary";
     this.buttonColors.calculatePercentage = "basic";
   }
 
   navigateToCalculatePercentage(): void {
-    this.link = this.sanitizer.bypassSecurityTrustResourceUrl('http://bills-calculate-percentage.gamidas.dev.br');
+    this.link = this.sanitizer.bypassSecurityTrustResourceUrl('https://bills-calculate-percentage.gamidas.dev.br');
     this.buttonColors.calculatePercentage = "primary";
     this.buttonColors.updateSalary = "basic";
   }
