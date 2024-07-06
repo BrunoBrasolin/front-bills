@@ -1,0 +1,24 @@
+.sidenav {
+  width: 300px;
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+
+  ::ng-deep {
+    .mat-drawer-inner-container {
+      display: flex;
+      flex-direction: column;
+
+      button {
+        margin: 0 .25rem 1rem;
+        padding: .5rem 0;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    position: relative;
+    width: 100%;
+    flex-direction: column;
+  }
+}
