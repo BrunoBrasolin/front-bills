@@ -11,11 +11,9 @@ export const routes: Routes = [
   {
     path: 'calcular-salario',
     component: CalculatePercentageComponent,
-    pathMatch: 'full'
   },
   {
     path: 'atualizar-salario',
     component: UpdateSalaryComponent,
-    pathMatch: 'full'
   },
 ];

@@ -1,3 +1,10 @@
+$sidebar-width: 300px;
+
+body {
+  overflow: hidden;
+  height: 100vh;
+}
+
 .sidenav-container {
   height: 100%;
 
@@ -7,10 +14,35 @@
     }
   }
 
+  .sidenav {
+    width: $sidebar-width;
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+
+    ::ng-deep {
+      .mat-drawer-inner-container {
+        display: flex;
+        flex-direction: column;
+
+        button {
+          margin: 0 .25rem 1rem;
+          padding: .5rem 0;
+        }
+      }
+    }
+  }
+
   @media only screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
     height: auto;
+
+    .sidenav {
+      position: relative;
+      width: 100%;
+      flex-direction: column;
+    }
 
     mat-sidenav-content {
       margin: 0 !important;

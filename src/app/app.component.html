@@ -1,3 +1,14 @@
-<app-menu />
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav mode="side" opened class="sidenav">
+    <h1>Contas</h1>
+    <button mat-raised-button [color]="buttonColors.calculatePercentage"
+      (click)="navigateToCalculatePercentage()">Calcular porcentagem</button>
+    <button mat-raised-button [color]="buttonColors.updateSalary" (click)="navigateToUpdateSalary()">Atualizar
+      salário</button>
+  </mat-sidenav>
 
-<router-outlet></router-outlet>
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

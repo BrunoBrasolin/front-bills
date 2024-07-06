@@ -4,17 +4,27 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { CalculatePercentageComponent } from './calculate-percentage/calculate-percentage.component';
 import { UpdateSalaryComponent } from './update-salary/update-salary.component';
-import { MenuComponent } from './menu/menu.component';
-import { RouterModule } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
+
+interface ButtonColors {
+  calculatePercentage: string;
+  updateSalary: string;
+}
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
+    CommonModule,
+    RouterOutlet,
+    RouterModule,
+    MatSidenavModule,
+    MatButtonModule,
     MatSidenavModule,
     MatDividerModule,
     MatIconModule,
-    MenuComponent,
     CalculatePercentageComponent,
     UpdateSalaryComponent
   ],
@@ -22,4 +32,23 @@ import { RouterModule } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  buttonColors: ButtonColors = {
+    calculatePercentage: "basic",
+    updateSalary: "basic"
+  };
+
+  constructor() {
+    this.buttonColors.calculatePercentage = "primary";
+    this.buttonColors.updateSalary = "basic";
+  }
+
+  navigateToUpdateSalary(): void {
+    this.buttonColors.updateSalary = "primary";
+    this.buttonColors.calculatePercentage = "basic";
+  }
+
+  navigateToCalculatePercentage(): void {
+    this.buttonColors.calculatePercentage = "primary";
+    this.buttonColors.updateSalary = "basic";
+  }
 }
