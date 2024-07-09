@@ -13,6 +13,11 @@ interface ButtonColors {
   updateSalary: string;
 }
 
+enum Components {
+  CalculatePercentage,
+  UpdateSalary
+}
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -37,17 +42,23 @@ export class AppComponent {
     updateSalary: "basic"
   };
 
+  public activeComponent = Components.CalculatePercentage;
+  public ComponentsType = Components;
+
   constructor() {
     this.buttonColors.calculatePercentage = "primary";
     this.buttonColors.updateSalary = "basic";
   }
 
   navigateToUpdateSalary(): void {
+
+    this.activeComponent = Components.UpdateSalary;
     this.buttonColors.updateSalary = "primary";
     this.buttonColors.calculatePercentage = "basic";
   }
 
   navigateToCalculatePercentage(): void {
+    this.activeComponent = Components.CalculatePercentage;
     this.buttonColors.calculatePercentage = "primary";
     this.buttonColors.updateSalary = "basic";
   }

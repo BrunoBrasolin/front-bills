@@ -9,6 +9,7 @@
 
 
   <mat-sidenav-content>
-    <router-outlet></router-outlet>
+    <app-calculate-percentage *ngIf="activeComponent == ComponentsType.CalculatePercentage"></app-calculate-percentage>
+    <app-update-salary *ngIf="activeComponent == ComponentsType.UpdateSalary"></app-update-salary>
   </mat-sidenav-content>
 </mat-sidenav-container>
