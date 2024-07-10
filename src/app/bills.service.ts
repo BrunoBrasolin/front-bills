@@ -17,6 +17,6 @@ export class BillsService {
 
   public UpdateSalary(dto: ApiDtoInterface): Observable<void> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    return this.http.post<void>(`https://api.gamidas.dev.br/contas/atualizar-salario`, JSON.stringify(dto), { headers })
+    return this.http.put<void>(`https://api.gamidas.dev.br/contas/atualizar-salario`, JSON.stringify(dto), { headers })
   }
 }
