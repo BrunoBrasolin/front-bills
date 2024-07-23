@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatIconModule } from '@angular/material/icon';
-import { MatDividerModule } from '@angular/material/divider';
 import { CalculatePercentageComponent } from './calculate-percentage/calculate-percentage.component';
 import { UpdateSalaryComponent } from './update-salary/update-salary.component';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { MatButtonModule } from '@angular/material/button';
 
 interface ButtonColors {
   calculatePercentage: string;
@@ -25,11 +21,6 @@ enum Components {
     CommonModule,
     RouterOutlet,
     RouterModule,
-    MatSidenavModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatDividerModule,
-    MatIconModule,
     CalculatePercentageComponent,
     UpdateSalaryComponent
   ],

@@ -1,21 +1,21 @@
 <main class="main">
   <h1>Atualizar Salário</h1>
 
-  <mat-form-field>
-    <mat-label>Valor</mat-label>
+  <div>
+    <label>Valor</label>
     <span matTextPrefix>R$ &nbsp;</span>
     <input matInput type="number" [(ngModel)]="salary" />
-  </mat-form-field>
+  </div>
 
   <br>
 
-  <mat-form-field>
-    <mat-label>Pessoa</mat-label>
-    <mat-select [(ngModel)]="person">
-      <mat-option [value]="0">Letícia</mat-option>
-      <mat-option [value]="1">Bruno</mat-option>
-    </mat-select>
-  </mat-form-field>
+  <div>
+    <label>Pessoa</label>
+    <select [(ngModel)]="person">
+      <option [value]="0">Letícia</option>
+      <option [value]="1">Bruno</option>
+    </select>
+  </div>
 
   <br>
 

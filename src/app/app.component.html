@@ -1,15 +1,13 @@
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav mode="side" opened class="sidenav">
+<main class="bills-content">
+  <div class="side-menu">
     <h1>Contas</h1>
-    <button mat-raised-button [color]="buttonColors.calculatePercentage"
-      (click)="navigateToCalculatePercentage()">Calcular porcentagem</button>
-    <button mat-raised-button [color]="buttonColors.updateSalary" (click)="navigateToUpdateSalary()">Atualizar
+    <button class="button" (click)="navigateToCalculatePercentage()">Calcular porcentagem</button>
+    <button class="button" (click)="navigateToUpdateSalary()">Atualizar
       salário</button>
-  </mat-sidenav>
+  </div>
 
-
-  <mat-sidenav-content>
+  <div class="side-content">
     <app-calculate-percentage *ngIf="activeComponent == ComponentsType.CalculatePercentage"></app-calculate-percentage>
     <app-update-salary *ngIf="activeComponent == ComponentsType.UpdateSalary"></app-update-salary>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+  </div>
+</main>
